@@ -69,7 +69,7 @@ define(["jquery", "bootstrap"], function (jQuery) {
         if (sHash != "") {
             makeActive(sHash);
             toggleHeader();
-            if(stickyHeader.css('position') == "fixed") // we need to move out from under fixed header
+            if(stickyHeaderTop < jQuery(sHash).offset().top) // we need to move out from under fixed header
                 jQuery(window).scrollTop(jQuery(sHash).offset().top - stickyHeaderHeight);
         }
     };
