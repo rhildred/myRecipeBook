@@ -29,7 +29,7 @@ define(["jquery", "bootstrap"], function (jQuery) {
             var nTop = toggleHeader();
             var aAnchors = stickyHeader.find('a');
             for (var n = aAnchors.length - 1; n >= 0; n--) {
-                var sHref = aAnchors[n].href.split("/").pop();
+                var sHref = aAnchors[n].href.split("/").pop().replace("index.html", "");
                 if (sHref.length > 1) { // need to make sure there is something more than a pound sign here
                     var nDivTop = jQuery(sHref).offset().top;
                     if (nDivTop <= nTop + stickyHeaderHeight) {
