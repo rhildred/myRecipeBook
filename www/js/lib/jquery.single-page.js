@@ -57,7 +57,7 @@ define(["jquery", "bootstrap"], function (jQuery) {
         stickyHeader.find('a').click(function () {
             var nOffset = stickyHeaderHeight;
             // first lets see if the stickyHeader is static
-            if(stickyHeader.css('position') != "fixed") nOffset *= 2;
+            if (stickyHeader.css('position') != "fixed") nOffset *= 2;
             //Animate
             jQuery('html, body').stop().animate({
                 scrollTop: jQuery(jQuery(this).attr('href')).offset().top - nOffset
@@ -69,8 +69,12 @@ define(["jquery", "bootstrap"], function (jQuery) {
         if (sHash != "") {
             makeActive(sHash);
             toggleHeader();
-            if(stickyHeaderTop < jQuery(sHash).offset().top) // we need to move out from under fixed header
+            if (stickyHeaderTop < jQuery(sHash).offset().top) // we need to move out from under fixed header
                 jQuery(window).scrollTop(jQuery(sHash).offset().top - stickyHeaderHeight);
         }
+        require(["index.html"], function (page) {
+            if (typeof page !== 'undefined') page();
+        });
+
     };
 });

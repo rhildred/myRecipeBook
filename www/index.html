@@ -68,9 +68,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#home">Home</a>
                 </li>
-                <li><a href="#contact">Contact</a>
-                </li>
                 <li><a href="#about">About</a>
+                </li>
+                <li><a href="#contact">Contact</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
@@ -99,14 +99,6 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <div class="bookmark" id="contact">
-        <h2>Contact</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
     <div class="bookmark" id="about">
         <h2>About</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -129,7 +121,66 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="bookmark" id="contact">
+        <h2>Contact</h2>
+        <div style="overflow:hidden;height:500px;width:100%;">
+            <div id="gmap_canvas" style="height:500px;width:100%;"></div>
+            <style>
+                #gmap_canvas img {
+                    max-width: none!important;
+                    background: none!important
+                }
+            </style><a class="google-map-code" href="http://www.trivoo.net/gutscheine/deichmann/" id="get-map-data">trivoo.net</a>
+        </div>
+        <h3>Inquiry</h3>
+        <div class="col-md-4">
 
+            <table>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>5-420 Erb St. West</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Suite 207</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Waterloo, ON, N2L 6K6, Canada</td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td>(855) 310-6344</td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td>(519) 594-0900</td>
+                    </tr>
+                    <tr>
+                        <td>Fax:</td>
+                        <td>(519) 957-2471</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-8">
+            <form id="inquiry">
+                <input type="email" name="email" placeholder="Reply email address" />
+                <br />
+                <input type="text" name="subject" placeholder="Subject of your inquiry" />
+                <br />
+                <textarea name="message" placeholder="Your Inquiry"></textarea>
+                <br />
+                <input type="submit" value="Send" class="btn btn-primary btn-md" />
+                <input type="reset" value="Reset" class="btn btn-primary btn-md" />
+                <span id="result"></span>
+                <br />
+            </form>
+        </div>
+
+    </div>
+    <div id="footer"></div>
     <script data-main="js/app" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
 </body>
 
