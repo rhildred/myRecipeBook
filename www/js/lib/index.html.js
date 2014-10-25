@@ -25,6 +25,7 @@ define(["jquery", "bootstrap", "async!http://maps.google.com/maps/api/js?sensor=
                 data: jQuery("#inquiry").serialize()
             }).done(function(oResponse){
                 jQuery("#result").html(oResponse.result);
+                jQuery('#inquiry').trigger("reset");
             }).fail(function(sHtml){
                 jQuery("#result").css("color", "red").html(sHtml);
             });
