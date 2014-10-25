@@ -1,4 +1,4 @@
-define(["jquery", "bootstrap", "async!http://maps.google.com/maps/api/js?sensor=false"], function(jQuery){
+define(["jquery", "bootstrap", "async!//maps.google.com/maps/api/js?sensor=false"], function(jQuery){
     return function(){
         jQuery(".carousel").carousel();
             var myOptions = {
