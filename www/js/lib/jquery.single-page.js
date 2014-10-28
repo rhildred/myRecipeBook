@@ -11,7 +11,7 @@ define(["jquery", "bootstrap"], function (jQuery) {
                 stickyHeader.css({
                     position: 'fixed',
                     top: '0px',
-                    width: '100%'
+                    width: stickyHeader.parent().width()
                 });
                 jQuery('#stickyalias').css('display', 'block');
             } else {
