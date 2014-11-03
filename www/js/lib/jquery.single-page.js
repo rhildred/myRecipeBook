@@ -6,12 +6,12 @@ define(["jquery", "bootstrap"], function (jQuery) {
         var stickyHeaderHeight = this.outerHeight(true);
 
         function toggleHeader() {
+            stickyHeader.width(stickyHeader.parent().width());
             var nTop = jQuery(window).scrollTop();
             if (nTop > stickyHeaderTop) {
                 stickyHeader.css({
                     position: 'fixed',
-                    top: '0px',
-                    width: stickyHeader.parent().width()
+                    top: '0px'
                 });
                 jQuery('#stickyalias').css('display', 'block');
             } else {
@@ -25,7 +25,7 @@ define(["jquery", "bootstrap"], function (jQuery) {
 
         }
 
-        jQuery(window).scroll(function () {
+        jQuery(window).bind("scroll resize", function () {
             var nTop = toggleHeader();
             var aAnchors = stickyHeader.find('a');
             for (var n = aAnchors.length - 1; n >= 0; n--) {
@@ -68,10 +68,10 @@ define(["jquery", "bootstrap"], function (jQuery) {
         sHash = window.location.hash;
         if (sHash != "") {
             makeActive(sHash);
-            toggleHeader();
             if (stickyHeaderTop < jQuery(sHash).offset().top) // we need to move out from under fixed header
                 jQuery(window).scrollTop(jQuery(sHash).offset().top - stickyHeaderHeight);
         }
+        toggleHeader();
         require(["index.html"], function (page) {
             if (typeof page !== 'undefined') page();
         });
