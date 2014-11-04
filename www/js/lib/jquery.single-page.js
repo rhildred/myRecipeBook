@@ -61,17 +61,17 @@ define(["jquery", "bootstrap"], function (jQuery) {
             //Animate
             jQuery('html, body').stop().animate({
                 scrollTop: jQuery(jQuery(this).attr('href')).offset().top - nOffset
-            }, 400);
+            }, 800);
             return true;
         });
 
         sHash = window.location.hash;
+        toggleHeader();
         if (sHash != "") {
             makeActive(sHash);
             if (stickyHeaderTop < jQuery(sHash).offset().top) // we need to move out from under fixed header
                 jQuery(window).scrollTop(jQuery(sHash).offset().top - stickyHeaderHeight);
         }
-        toggleHeader();
         require(["index.html"], function (page) {
             if (typeof page !== 'undefined') page();
         });
