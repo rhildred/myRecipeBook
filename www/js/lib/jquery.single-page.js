@@ -1,4 +1,4 @@
-define(["jquery", "bootstrap"], function (jQuery) {
+define(["jquery", "bootstrap", "history"], function (jQuery) {
     jQuery.fn.singlePage = function () {
         // Check the initial Position of the Sticky Header
         var stickyHeader = this;
@@ -13,13 +13,11 @@ define(["jquery", "bootstrap"], function (jQuery) {
                     position: 'fixed',
                     top: '0px'
                 });
-                jQuery('#stickyalias').css('display', 'block');
             } else {
                 stickyHeader.css({
                     position: 'static',
                     top: '0px'
                 });
-                jQuery('#stickyalias').css('display', 'none');
             }
             return nTop;
 
@@ -56,13 +54,15 @@ define(["jquery", "bootstrap"], function (jQuery) {
 
         stickyHeader.find('a').click(function () {
             var nOffset = stickyHeaderHeight;
+            var sHash = jQuery(this).attr('href');
             // first lets see if the stickyHeader is static
             if (stickyHeader.css('position') != "fixed") nOffset *= 2;
             //Animate
             jQuery('html, body').stop().animate({
-                scrollTop: jQuery(jQuery(this).attr('href')).offset().top - nOffset
-            }, 800);
-            return true;
+                scrollTop: jQuery(sHash).offset().top - nOffset
+            }, 1200);
+            History.pushState(null, null, sHash);
+            return false;
         });
 
         sHash = window.location.hash;
